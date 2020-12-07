@@ -1,8 +1,5 @@
 # Extended-Precision-Formatting-of-Doubles
-This is a ToString() like method returns a closer approximation of the actual number then the built in double ToString().  The rounding .net does is usually more concise and useful but sometimes there is a need to view the additional percision.
-
-# Testing
-I did do some testing on this but not extended testing. The only issues are possibly with extremely small numbers. ToStringFull(double.Epsilon) results in 1.11253E-308 however double.Epsilon.ToString() results in -5E-324.
+This is a ToString() like method returns a closer approximation of the actual number then the built in double ToString(). The rounding .net does is usually more concise and useful but sometimes there is a need to view the additional percision. This function has not been extensively tested.
 
 # The Function
     public static string ToStringFull(double value)
@@ -99,4 +96,5 @@ I did do some testing on this but not extended testing. The only issues are poss
 	ToStringFull(i - 6.9) --> -0.00000000000000088817841970012523233890533
 		
 
-
+# Testing / Accuracy 
+I did do some testing on this but not extended testing. The only issues are possibly with extremely small numbers. ToStringFull(double.Epsilon) results in 1.11253E-308 however double.Epsilon.ToString() results in -5E-324.
